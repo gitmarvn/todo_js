@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical JavaScript</title>
+</head>
+<body>
+    <script>
+
+        let todoList = {
+            todos: ['item 1', 'item 2', 'item 3', 'item 4', 'item 5'],
+            displayTodos: function(){
+                console.log('My Todos', this.todos)
+            },
+            addTodo: function(todo) {
+                this.todos.push(todo);
+                this.displayTodos();
+            },
+            changeTodo: function(position, newItem){
+                this.todos[position] = newItem;
+                this.displayTodos();
+            },
+            deleteTodo: function (position) {
+                this.todos.splice(position, 1);
+                this.displayTodos();
+            }
+        }
+
+    </script>
+</body>
+</html>
